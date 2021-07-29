@@ -57,28 +57,28 @@
                     <h1 class="page-header text-center font-w-800 text-uppercase">Message</h1>
                 </div>
             </div>
-            <form class="row justify-content-center needs-validation" novalidate="" method="post">
+            <form class="row justify-content-center needs-validation" novalidate="" >
                 <div class="col-md-10">
                     <h3 class="section-title mb-30">Write a Condolence Message here</h3>
                 </div>
                 <div class="col-md-5">
                     <div class="form-group mb-35">
-                        <input type="text" class="form-control shadow-none" placeholder="Full name" required="">
+                        <input id="name" required type="text" class="form-control shadow-none" placeholder="Full name" required="">
                         <span class="invalid-feedback">Please type your full name.</span>
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="form-group mb-35">
-                        <input type="email" class="form-control shadow-none" placeholder="Email address" required="">
+                        <input  id="email" type="email" class="form-control shadow-none" required placeholder="Email address" required="">
                         <span class="invalid-feedback">Please type your email address.</span>
                     </div>
                 </div>
                 <div class="col-md-10">
                     <div class="form-group mb-35">
-                        <textarea class="form-control shadow-none" placeholder="Type message" required=""></textarea>
+                        <textarea id="message" required class="form-control shadow-none" placeholder="Type message" required=""></textarea>
                         <span class="invalid-feedback">Please type your message.</span>
                     </div>
-                    <button class="butn border-0" type="submit">Send Message</button>
+                    <button class="butn border-0" id="send">Send Message</button>
                 </div>
             </form>
         </div>
@@ -131,9 +131,11 @@
     <!-- end of footer-bottom -->
 
     <!-- All JS Files -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/plugins.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/custom.js"></script>
     <script>
         // form validation script (only for this page)
         (function() {
